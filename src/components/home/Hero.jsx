@@ -1,65 +1,217 @@
+import { motion } from "framer-motion";
+import { ArrowRight, Star } from "lucide-react";
+
+import heroImage from "../../assets/images/hero.jpeg";
+import Button from "../ui/Button";
+import { heroData } from "../../data/heroData";
+
+const fadeLeft = {
+    hidden: {
+        opacity: 0,
+        x: -60,
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.8,
+        },
+    },
+};
+
+const fadeRight = {
+    hidden: {
+        opacity: 0,
+        x: 60,
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 1,
+        },
+    },
+};
+
 const Hero = () => {
     return (
-        <section className="min-h-screen bg-[#0B0B0B] text-white">
-            <div className="max-w-7xl mx-auto px-6 lg:px-12 min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+        <section
+            id="home"
+            className="relative min-h-screen overflow-hidden bg-[#0B0B0B] pt-28 text-white"
+        >
+            {/* Background */}
 
+            <div className="absolute inset-0">
+
+                <div className="absolute right-0 top-0 h-[600px] w-[600px] rounded-full bg-[#D4AF37]/10 blur-[180px]" />
+
+                <div className="absolute bottom-0 left-0 h-[450px] w-[450px] rounded-full bg-[#D4AF37]/5 blur-[150px]" />
+
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.08),transparent_35%)]" />
+
+            </div>
+
+            <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center justify-between gap-20 px-6 lg:flex-row lg:gap-10 lg:px-12 xl:px-16">
                 {/* Left Content */}
-                <div className="lg:w-1/2 text-center lg:text-left">
 
-                    <p className="text-yellow-500 uppercase tracking-[6px] mb-4">
-                        Welcome to Luxora
-                    </p>
+                <motion.div
+                    variants={fadeLeft}
+                    initial="hidden"
+                    animate="visible"
+                    className="w-full lg:w-1/2 text-center lg:text-left"
+                >
+                    {/* Premium Badge */}
 
-                    <h1 className="font-serif font-luxury text-5xl md:text-7xl leading-tight font-bold">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-5 py-2 backdrop-blur-md">
 
-                        Experience
+                        <Star
+                            size={14}
+                            className="fill-[#D4AF37] text-[#D4AF37]"
+                        />
 
-                        <span className="text-yellow-500"> Fine Dining </span>
-
-                        <br />
-
-                        Like Never Before
-
-                    </h1>
-
-                    <p className="text-gray-400 mt-8 text-lg leading-8 max-w-lg">
-                        Discover an unforgettable dining experience where every dish is
-                        crafted with passion, premium ingredients, and timeless elegance.
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row gap-5 mt-10 justify-center lg:justify-start">
-
-                        <button className="bg-yellow-500 text-black px-8 py-4 rounded-full font-semibold hover:scale-105 hover:shadow-[0_0_35px_rgba(212,175,55,0.4)] duration-300">
-                            Book a Table
-                        </button>
-
-                        <button className="border-yellow-500
-                            text-yellow-500
-                            px-8
-                            py-4
-                            rounded-full
-                            hover:bg-yellow-500
-                            hover:text-black
-                            duration-300">
-                            Explore Menu
-                        </button>
+                        <span className="text-xs uppercase tracking-[4px] text-[#D4AF37]">
+                            {heroData.badge}
+                        </span>
 
                     </div>
 
-                </div>
+                    {/* Heading */}
 
-                {/* Right Image */}
+                    <h1 className="mt-8 font-playfair text-5xl font-bold leading-[0.95] tracking-tight md:text-7xl xl:text-[88px]">
 
-                <div className="lg:w-1/2 flex justify-center">
+                        {heroData.heading[0]}
 
-                    <img
-                        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900"
-                        alt="Restaurant"
-                        className="rounded-3xl w-full max-w-lg object-cover shadow-[0_25px_80px_rgba(0,0,0,0.45)] hover:scale-105 duration-500"
-                    />
+                        <span className="mt-4 block text-[#D4AF37]">
+                            {heroData.heading[1]}
+                        </span>
 
-                </div>
+                        <span className="mt-4 block">
+                            {heroData.heading[2]}
+                        </span>
 
+                    </h1>
+
+                    {/* Description */}
+
+                    <p className="mx-auto mt-8 max-w-lg text-base leading-8 text-[#A1A1AA] lg:mx-0 lg:text-lg">
+                        {heroData.description}
+                    </p>
+
+                    {/* Buttons */}
+
+                    <div className="mt-12 flex flex-col items-center gap-5 sm:flex-row lg:justify-start">
+
+                        <Button>
+
+                            <span className="flex items-center gap-2">
+
+                                {heroData.primaryButton}
+
+                                <ArrowRight size={18} />
+
+                            </span>
+
+                        </Button>
+
+                        <Button variant="secondary">
+
+                            {heroData.secondaryButton}
+
+                        </Button>
+
+                    </div>
+
+                    {/* Trust Cards */}
+
+                    <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-3">
+
+                        {heroData.stats.map((item) => (
+
+                            <div
+                                key={item.id}
+                                className="rounded-3xl border border-white/10 bg-white/5 px-5 py-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/40"
+                            >
+
+                                <h3 className="text-2xl font-bold text-[#D4AF37]">
+                                    {item.value}
+                                </h3>
+
+                                <p className="mt-2 text-sm text-[#A1A1AA]">
+                                    {item.label}
+                                </p>
+
+                            </div>
+
+                        ))}
+
+                    </div>
+
+                </motion.div>
+                {/* Right Content */}
+
+                <motion.div
+                    variants={fadeRight}
+                    initial="hidden"
+                    animate="visible"
+                    className="relative flex w-full items-center justify-center lg:w-1/2"
+                >
+                    {/* Rating Card */}
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 }}
+                        className="absolute left-0 top-6 z-20 rounded-3xl border border-white/10 bg-[#111111]/90 px-6 py-5 backdrop-blur-xl shadow-2xl"
+                    >
+                        <div className="flex items-center gap-2">
+                            <Star
+                                size={18}
+                                className="fill-[#D4AF37] text-[#D4AF37]"
+                            />
+                            <span className="text-lg font-semibold text-white">
+                                4.9 Rating
+                            </span>
+                        </div>
+
+                        <p className="mt-2 text-sm text-[#A1A1AA]">
+                            Rated by 2,500+ happy guests
+                        </p>
+                    </motion.div>
+
+                    {/* Hero Image */}
+
+                    <div className="relative">
+
+                        <img
+                            src={heroImage}
+                            alt="Luxury Restaurant"
+                            className="h-[520px] w-full max-w-[650px] rounded-[48px] border border-white/10 object-cover shadow-[0_45px_100px_rgba(0,0,0,0.55)] transition duration-500 hover:scale-[1.02] lg:h-[700px]"
+                        />
+
+                        {/* Dark Overlay */}
+
+                        <div className="absolute inset-0 rounded-[48px] bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+
+                    </div>
+
+                    {/* Michelin Card */}
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.8 }}
+                        className="absolute bottom-8 right-0 rounded-3xl border border-[#D4AF37]/30 bg-[#111111]/90 px-6 py-5 backdrop-blur-xl shadow-2xl"
+                    >
+                        <h3 className="text-lg font-semibold text-[#D4AF37]">
+                            Michelin Inspired
+                        </h3>
+
+                        <p className="mt-2 text-sm text-[#A1A1AA]">
+                            Crafted by world-class chefs
+                        </p>
+                    </motion.div>
+
+                </motion.div>
             </div>
         </section>
     );
