@@ -1,1 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @import "tailwindcss";
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0B0B0B;
+}
+
+:root{
+  --bg:#0B0B0B;
+  --gold:#D4AF37;
+  --white:#FAFAFA;
+  --gray:#9CA3AF;
+}
+
+.font-luxury{
+    font-family:'Playfair Display',serif;
+}
