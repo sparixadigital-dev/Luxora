@@ -1,16 +1,160 @@
-# React + Vite
+# 🍽️ Luxora - Luxury Fine Dining Restaurant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium and fully responsive luxury restaurant website built using **React.js**, **Tailwind CSS**, **Framer Motion**, and **React Router**. Luxora delivers a modern fine dining experience with elegant UI, smooth animations, and an interactive reservation system.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 https://luxora-lemon.vercel.app/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# ✨ Features
 
-## Expanding the ESLint configuration
+- 🎨 Premium Luxury UI
+- 📱 Fully Responsive Design
+- ⚡ Built with React + Vite
+- 🎞️ Smooth Framer Motion Animations
+- 🧩 Component-Based Architecture
+- 🍽️ Featured Menu Section
+- 🖼️ Premium Gallery Layout
+- 💬 Customer Testimonials
+- 📅 Reservation Page
+- ✅ Form Validation
+- ❓ Interactive FAQ Accordion
+- 📍 Google Maps Integration
+- ⬆️ Scroll To Top Button
+- 🌙 Modern Dark Theme
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# 🛠️ Tech Stack
+
+### Frontend
+
+- React.js
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Router DOM
+- Lucide React
+- React Icons
+
+---
+
+# 📂 Folder Structure
+
+```text
+src
+│
+├── assets
+│
+├── components
+│   ├── home
+│   ├── layout
+│   ├── reservation
+│   └── ui
+│
+├── pages
+│   ├── Home.jsx
+│   └── Reservation.jsx
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+# 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/sparixadigital-dev/Luxora.git
+```
+
+Go to project folder
+
+```bash
+cd Luxora
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
+
+```bash
+npm run dev
+```
+
+Build project
+
+```bash
+npm run build
+```
+
+---
+
+# 📸 Screenshots
+
+## 🏠 Home Page
+
+> Add a screenshot here
+
+---
+
+## 🍽️ Reservation Page
+
+> Add a screenshot here
+
+---
+
+# 🎯 Future Improvements
+
+- Backend Integration (Node.js + Express)
+- MongoDB Reservation Database
+- Email Confirmation
+- Authentication
+- Admin Dashboard
+- Online Payments
+- Table Availability System
+
+---
+
+# 💡 What I Learned
+
+During this project I improved my skills in:
+
+- Building reusable React components
+- Component-based architecture
+- Responsive UI Design
+- Tailwind CSS
+- React Router
+- Framer Motion animations
+- Form validation
+- State management using React Hooks
+- Creating production-ready frontend projects
+
+---
+
+# 👩‍💻 Developed By
+
+**Parul Singh**
+
+Computer Science Engineer
+
+📧 Email: psrajput2026@gmail.com
+
+🔗 LinkedIn: https://linkedin.com/in/parul-singh17
+
+🐙 GitHub: https://github.com/sparixadigital-dev
+---
+
+# ⭐ If you like this project
+
+Give this repository a ⭐ on GitHub.
+
+It motivates me to build more amazing projects.
