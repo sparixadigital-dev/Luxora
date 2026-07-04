@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
 
 import heroImage from "../../assets/images/hero.jpeg";
@@ -101,22 +102,30 @@ const Hero = () => {
 
                     <div className="mt-12 flex flex-col items-center gap-5 sm:flex-row lg:justify-start">
 
-                        <Button>
+                        <Link to="/reservation">
 
-                            <span className="flex items-center gap-2">
+                            <Button>
 
-                                {heroData.primaryButton}
+                                <span className="flex items-center gap-2">
 
-                                <ArrowRight size={18} />
+                                    {heroData.primaryButton}
 
-                            </span>
+                                    <ArrowRight size={18} />
 
-                        </Button>
+                                </span>
 
-                        <Button variant="secondary">
+                            </Button>
 
+                        </Link>
+                        <Button
+                            variant="secondary"
+                            onClick={() =>
+                                document
+                                    .getElementById("menu")
+                                    ?.scrollIntoView({ behavior: "smooth" })
+                            }
+                        >
                             {heroData.secondaryButton}
-
                         </Button>
 
                     </div>
