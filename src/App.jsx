@@ -5,19 +5,35 @@ import Footer from "./components/layout/Footer";
 
 import Home from "./pages/Home";
 import Reservation from "./pages/Reservation";
+import ScrollToTopButton from "./components/ui/ScrollToTopButton";
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Navbar />
+            <Home />
+            <Footer showCTA={true} />
+            <ScrollToTopButton />
+          </>
+        }
+      />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/reservation" element={<Reservation />} />
-      </Routes>
-
-      <Footer />
-    </>
+      <Route
+        path="/reservation"
+        element={
+          <>
+            <Navbar />
+            <Reservation />
+            <Footer showCTA={false} />  
+            <ScrollToTopButton />
+          </>
+        }
+      />
+    </Routes>
   );
 }
 

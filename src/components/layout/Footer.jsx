@@ -8,7 +8,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa6";
 
-const Footer = () => {
+const Footer = ({ showCTA = true }) => {
   return (
     <footer className="relative overflow-hidden bg-[#080808] text-white">
 
@@ -21,8 +21,8 @@ const Footer = () => {
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 xl:px-16">
 
         {/* CTA */}
-
-        <motion.div
+        {showCTA && (
+          <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -69,6 +69,8 @@ const Footer = () => {
           </div>
 
         </motion.div>
+        )}
+        
 
         {/* Footer Content */}
 
