@@ -102,14 +102,13 @@ npm run build
 
 ## 🏠 Home Page
 
-> Add a screenshot here
+![Home Page](./screenshots/home.png)
 
 ---
 
 ## 🍽️ Reservation Page
 
-> Add a screenshot here
-
+![Reservation Page](./screenshots/reservation.png)
 ---
 
 # 🎯 Future Improvements
